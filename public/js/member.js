@@ -45,7 +45,13 @@ function pickMember(data){
         data : data
     }).done(function(result){
         if(result.message == 'success'){
-            
+            Swal.fire({
+                title: result.member_name,
+                imageUrl: 'https://damp-brushlands-64558.herokuapp.com/image/' + result.imageName,
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+            });
         }else if(result.message == 'error'){
             $.each(result.messsages, function(key, val){
                 toastr.error(val, '', {
@@ -54,7 +60,12 @@ function pickMember(data){
                 });
             });
         }else if(result.message == 'error-1'){
-            toastr.error('Name not found!', '', {
+            toastr.error('Hindi mahanap ang name mo gurl!', '', {
+                progressBar: true,
+                timeOut: 2000,
+            });
+        }else if(result.message == 'error-2'){
+            toastr.error('Nakabunot kana gurl! Juliet?', '', {
                 progressBar: true,
                 timeOut: 2000,
             });

@@ -14,6 +14,7 @@
     <script src="https://damp-brushlands-64558.herokuapp.com/js/app.js"></script>
     <script src="https://damp-brushlands-64558.herokuapp.com/js/all.js"></script>
     <script src="https://damp-brushlands-64558.herokuapp.com/js/toastr.min.js"></script>
+    <script src="https://damp-brushlands-64558.herokuapp.com/js/sweetalert2.min.js"></script>
 
     <title>December 2019</title>
 </head>
