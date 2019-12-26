@@ -41,14 +41,6 @@ class MembersController extends Controller
     }
 
     public function randomPick(){
-        
-        $member = MemberPicked::create([
-            'member_id' => '$request->memberName',
-            'member_id_picked' => '$request->memberName'
-        ]);
-
-        $all = MemberPicked::first();
-        print_r($all->member_id.' - '.$all->member_id_picked);
         return view('random-pick');
     }
 
@@ -72,6 +64,7 @@ class MembersController extends Controller
             ]);
         }
 
+        
         
     }
 }
