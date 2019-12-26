@@ -18,3 +18,6 @@ Route::get('/admin', 'MembersController@indexAdmin');
 
 Route::get('/random-pick', 'MembersController@randomPick');
 Route::post('/pick-member', 'MembersController@randomPicked');
+
+Route::get('/path-create', 'MembersController@pathCreate');
+Route::post('/path-save', 'MembersController@pathSave');

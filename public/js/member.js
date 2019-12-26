@@ -12,6 +12,11 @@ $(function(){
         return false;
     });
     
+    $('#path_create').submit(function(){
+        let data = $(this).serialize();
+        pathMember(data);
+        return false;
+    });
 });
 
 function addMember(data){
@@ -47,9 +52,10 @@ function pickMember(data){
         if(result.message == 'success'){
             Swal.fire({
                 title: result.member_name,
-                imageUrl: 'https://damp-brushlands-64558.herokuapp.com/image/' + result.imageName,
+                imageUrl: 'http://localhost:8000/image/' + result.imageName + '.jpg',
+                imageUrl: 'https://damp-brushlands-64558.herokuapp.com/image/' + result.imageName + '.jpg',
                 imageWidth: 400,
-                imageHeight: 200,
+                imageHeight: 400,
                 imageAlt: 'Custom image',
             });
         }else if(result.message == 'error'){
@@ -72,5 +78,15 @@ function pickMember(data){
         }
     }).fail(function(e){
         alert(e);
+    });
+}
+
+function pathMember(data){
+    $.ajax({
+        url : '/path-save',
+        type : 'POST',
+        data : data
+    }).done(function(result){
+        window.location.href = '/path-create';
     });
 }

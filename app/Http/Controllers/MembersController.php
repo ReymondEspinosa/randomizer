@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Member;
+use App\MemberImage;
 use App\MemberPicked;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -85,10 +86,12 @@ class MembersController extends Controller
         ]);
 
         $memberNamePicked =  Member::where('id', $returnId)->first();
+        $memberImage = MemberImage::where('member_id', $returnId)->first();
 
         return response()->json([
             'message' => 'success',
             'member_name' => $memberNamePicked->name,
+            'imageName' => $memberImage->member_image_path,
         ]);
     }
 
@@ -109,6 +112,20 @@ class MembersController extends Controller
         $number = mt_rand(1, $memberCount);
         
         return $this->checker($number, $memberCount, $legitId);
+    }
+
+    public function pathCreate(){
+        $member = Member::all();
+        return view('path', compact('member'));
+    }
+
+    public function pathSave(Request $request){
+        $memberImage = MemberImage::create([
+            'member_id' => $request->member,
+            'member_image_path' => $request->pathName,
+        ]);
+        
+        return 'succes';
     }
     
 }
