@@ -44,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-8 offset-2 text-center mt-3">
-                            <button type="submit" form="pick_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b> Pick </b></button>
+                            <button type="submit" form="pick_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b> Bunot ka Gurl! </b></button>
                         </div>
                     </div>
                 </div>
