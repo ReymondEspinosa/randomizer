@@ -137,4 +137,10 @@ class MembersController extends Controller
 
         return view('member-picked', compact('member','memberPicked'));
     }
+
+    public function image(){
+        $image = MemberImage::all();
+        return view('image',compact('image'));
+    }
 }
+
