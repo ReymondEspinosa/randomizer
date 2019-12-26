@@ -38,4 +38,32 @@ class MembersController extends Controller
         $member = Member::all();
         return view('admin', compact('member'));
     }
+
+    public function randomPick(){
+
+        return view('random-pick');
+    }
+
+    public function randomPicked(Request $request){
+        $validator = Validator::make($request->all(),[
+            'memberName' => 'required'
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'message' => 'error',
+                'messsages' => $validator->messages(),
+            ]);
+        }
+
+        $match = Member::where('name',$request->memberName)->first();
+
+        if(!$match){
+            return response()->json([
+                'message' => 'error-1',
+            ]);
+        }
+
+        
+    }
 }

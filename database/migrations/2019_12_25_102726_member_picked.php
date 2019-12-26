@@ -17,6 +17,7 @@ class MemberPicked extends Migration
         Schema::create('member_picked', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('member_id');
+            $table->string('member_id_picked');
             $table->timestamps();
         });
     }
