@@ -13,3 +13,5 @@
 
 Route::get('/', 'MembersController@index');
 Route::post('/add-member', 'MembersController@create');
+
+Route::get('/admin', 'MembersController@indexAdmin');

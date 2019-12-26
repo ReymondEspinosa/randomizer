@@ -15,7 +15,10 @@ function addMember(data){
         data : data
     }).done(function(result){
         if(result.message == 'success'){
-            toastr.info(val);
+            toastr.success('Success!', '', {
+                progressBar: true,
+                timeOut: 2000,
+            });
         }else if(result.message == 'error'){
             $.each(result.messsages, function(key, val){
                 toastr.error(val, '', {

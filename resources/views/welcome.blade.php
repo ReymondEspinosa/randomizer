@@ -1,77 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layout')
 
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/app.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/all.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/animate.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/toastr.min.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/member.css">
-
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/app.js"></script>
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/all.js"></script>
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/toastr.min.js"></script>
-
-    <title>December 2019</title>
-</head>
-<body>
-    <form class="form-format" id="member_form">
-        @csrf
-         <div class="container mt-5 mb-5">
-            <div class="row shadow col-lg-10 p-0 mx-auto my-auto">
-                <div class="col-lg-7 p-0 login-form-left animated zoomIn order-lg-2">
-                    <div class="rounded-left p-5 image-holder-left">
-                        <div class="row mt-5">
-                            <div class="col-12 text-center">
-                                <h2>Hello, Friend</h2>
-                            </div>
-                            <div class="col-4 offset-4">
-                                <hr class="hr-style-right">
-                            </div>
-                            <div class="col-12 text-center mt-3">
-                                <label class="label">
-                                    What :  LU Crew Inuman
-                                </label>
-                            </div>
-                            <div class="col-12 text-center">
-                                <label class="label">
-                                    Where :  TBA
-                                </label>
-                            </div>
-                            <div class="col-12 text-center mb-2">
-                                <label class="label">
-                                    When :  Friday, December 27, 2019
-                                </label>
-                            </div>
+@section('content')
+<form class="form-format" id="member_form">
+    @csrf
+     <div class="container mt-5 mb-5">
+        <div class="row shadow col-lg-10 p-0 mx-auto my-auto">
+            <div class="col-lg-7 p-0 login-form-left animated zoomIn order-lg-2">
+                <div class="rounded-left p-5 image-holder-left">
+                    <div class="row mt-5">
+                        <div class="col-12 text-center">
+                            <h2>Hello, Friend</h2>
                         </div>
-                        <div class="row">
-                            <div class="col-8 offset-2 mt-2">
-                                <div class="form-group row">        
-                                    <label class="has-float-label col-12 p-0">
-                                        <span class="span-credential-passwor">Name</span>
-                                    </label>                        
-                                    <label class="has-float-label col-12 p-0">
-                                        <input class="form-control rounded-0" type="text" id="memberName" name="memberName"/>
-                                    </label>                            
-                                </div>
-                            </div>
+                        <div class="col-4 offset-4">
+                            <hr class="hr-style-right">
                         </div>
-                        <div class="row">
-                            <div class="col-8 offset-2 text-center mt-3">
-                                <button type="submit" form="member_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b> Go </b></button>
+                        <div class="col-12 text-center mt-3">
+                            <label class="label">
+                                What :  LU Crew Inuman
+                            </label>
+                        </div>
+                        <div class="col-12 text-center">
+                            <label class="label">
+                                Where :  TBA
+                            </label>
+                        </div>
+                        <div class="col-12 text-center mb-2">
+                            <label class="label">
+                                When :  Friday, December 27, 2019
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 offset-2 mt-2">
+                            <div class="form-group row">        
+                                <label class="has-float-label col-12 p-0">
+                                    <span class="span-credential-passwor">Name</span>
+                                </label>                        
+                                <label class="has-float-label col-12 p-0">
+                                    <input class="form-control rounded-0" type="text" id="memberName" name="memberName"/>
+                                </label>                            
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 p-0 image-holder-right login-form-right animated zoomIn order-lg-1">
+                    <div class="row">
+                        <div class="col-8 offset-2 text-center mt-3">
+                            <button type="submit" form="member_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b> Go </b></button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-5 p-0 image-holder-right login-form-right animated zoomIn order-lg-1">
+            </div>
         </div>
-    </form>
-    {{-- https://damp-brushlands-64558.herokuapp.com/js/member.js --}}
+    </div>
+</form>
+@endsection
+
+@push('script')
     <script src="{{asset('js/member.js')}}"></script>
-</body>
-</html>
+@endpush
