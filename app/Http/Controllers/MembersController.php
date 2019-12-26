@@ -6,6 +6,7 @@ use App\Member;
 use App\MemberImage;
 use App\MemberPicked;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class MembersController extends Controller
@@ -128,4 +129,14 @@ class MembersController extends Controller
         return 'succes';
     }
     
+    public function memberPicked(){
+
+        $memberPicked = DB::table('member_picked')
+        ->join('members as m1', 'm1.id', '=', 'member_picked.member_id')
+        ->join('members as m2', 'm2.id', '=', 'member_picked.member_id_picked')
+        ->select('m1.name as Member','m2.name as Picked')
+        ->get();
+
+        return view('member-picked', compact('memberPicked'));
+    }
 }

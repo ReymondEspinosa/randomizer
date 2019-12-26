@@ -21,3 +21,5 @@ Route::post('/pick-member', 'MembersController@randomPicked');
 
 Route::get('/path-create', 'MembersController@pathCreate');
 Route::post('/path-save', 'MembersController@pathSave');
+
+Route::get('/show-member-picked', 'MembersController@memberPicked');
