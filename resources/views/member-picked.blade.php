@@ -6,18 +6,34 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12 mt-3">
-                        <table class="table table-bordered" id="tbl_member">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <th scope="col">ID</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Name Picked</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($member as $allMember)
+                                <tr>
+                                    <td>{{$allMember->id}}</td>
+                                    <td>{{$allMember->name}}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($memberPicked as $allMemberPicked)
                                 <tr>
-                                    <td>{{$allMemberPicked->Member}}</td>
-                                    <td>{{$allMemberPicked->Picked}}</td>
+                                    <td>{{$allMemberPicked->member_id}}</td>
+                                    <td>{{$allMemberPicked->member_id_picked}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -28,7 +44,3 @@
         </div>
     </div>
 @endsection
-
-@push('script')
-    <script src="{{asset('js/member-list.js')}}"></script>
-@endpush

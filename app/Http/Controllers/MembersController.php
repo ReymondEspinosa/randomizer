@@ -131,12 +131,10 @@ class MembersController extends Controller
     
     public function memberPicked(){
 
-        $memberPicked = DB::table('member_picked')
-        ->join('members as m1', 'm1.id', '=', 'member_picked.member_id')
-        ->join('members as m2', 'm2.id', '=', 'member_picked.member_id_picked')
-        ->select('m1.name as Member','m2.name as Picked')
-        ->get();
+        $member = Member::all();
 
-        return view('member-picked', compact('memberPicked'));
+        $memberPicked = MemberPicked::all();
+
+        return view('member-picked', compact('member','memberPicked'));
     }
 }
