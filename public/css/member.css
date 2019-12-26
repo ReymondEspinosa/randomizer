@@ -1,0 +1,6 @@
+
+.image-holder-right{
+    background-image: url('/image/img-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
