@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'MembersController@index');
+Route::get('/random-pick', 'MembersController@index');
 Route::post('/add-member', 'MembersController@create');
 
 Route::get('/admin', 'MembersController@indexAdmin');
 
-Route::get('/random-pick', 'MembersController@randomPick');
+Route::get('/', 'MembersController@randomPick');
 Route::post('/pick-member', 'MembersController@randomPicked');
 
 Route::get('/path-create', 'MembersController@pathCreate');
