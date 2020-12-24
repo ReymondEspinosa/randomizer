@@ -57,5 +57,5 @@
 @endsection
 
 @push('script')
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/member.js"></script>
+    <script src="{{asset('js/member.js')}}"></script>
 @endpush
