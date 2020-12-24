@@ -16,17 +16,17 @@
                         </div>
                         <div class="col-12 text-center mt-3">
                             <label class="label">
-                                What :  LU Crew Inuman
+                                What :  LU Crew Christmas Celebration
                             </label>
                         </div>
                         <div class="col-12 text-center">
                             <label class="label">
-                                Where :  TBA
+                                Where :  Ejunnel House 
                             </label>
                         </div>
                         <div class="col-12 text-center mb-2">
                             <label class="label">
-                                When :  Friday, December 27, 2019
+                                When :  Saturday, December 26, 2020
                             </label>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-8 offset-2 text-center mt-3">
-                            <button type="submit" form="pick_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b>🎅 Bunot ka gurl! 🎅</b></button>
+                            <button type="submit" form="pick_form" class="btn btn-primary btn-block login-form pr-sm-5 pl-sm-5"><b>🎅 Bunot na! 🎅</b></button>
                         </div>
                     </div>
                 </div>

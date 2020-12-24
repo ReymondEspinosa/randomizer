@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/app.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/all.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/animate.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/toastr.min.css">
-    <link rel="stylesheet" href="https://damp-brushlands-64558.herokuapp.com/css/member.css">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app/all.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app/member.css')}}">
 
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/app.js"></script>
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/all.js"></script>
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/toastr.min.js"></script>
-    <script src="https://damp-brushlands-64558.herokuapp.com/js/sweetalert2.min.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/all.js')}}"></script>
+    <script src="{{asset('js/toastr.min.js')}}"></script>
+    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
 
-    <title>December 2019</title>
+    <title>December 2020</title>
 </head>
 <body>
     @yield('content')
