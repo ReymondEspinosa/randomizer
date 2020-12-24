@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app/all.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app/toastr.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app/member.css')}}">
+    <link rel="stylesheet" href="{{asset('css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/member.css')}}">
 
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/all.js')}}"></script>
