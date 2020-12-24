@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-12 text-center mt-3">
                             <label class="label">
-                                What :  LU Crew Christmas Celebration
+                                What :  LU Crew Year End Party
                             </label>
                         </div>
                         <div class="col-12 text-center">

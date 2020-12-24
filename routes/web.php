@@ -16,7 +16,7 @@ Route::post('/add-member', 'MembersController@create');
 
 Route::get('/admin', 'MembersController@indexAdmin');
 
-Route::get('/', 'MembersController@randomPick');
+Route::get('/', 'MembersController@create');
 Route::post('/pick-member', 'MembersController@randomPicked');
 
 Route::get('/path-create', 'MembersController@pathCreate');
