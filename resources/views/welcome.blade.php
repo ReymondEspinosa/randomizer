@@ -9,7 +9,7 @@
                 <div class="rounded-left p-5 image-holder-left">
                     <div class="row mt-5">
                         <div class="col-12 text-center">
-                            <h2>Hello, Friend</h2>
+                            <h2>Let's Party</h2>
                         </div>
                         <div class="col-4 offset-4">
                             <hr class="hr-style-right">
